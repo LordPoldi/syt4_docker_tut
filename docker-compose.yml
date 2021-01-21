@@ -46,15 +46,15 @@ services:
       PGADMIN_DEFAULT_PASSWORD: secret
       PGADMIN_LISTEN_PORT: 80
     ports:
-    - "8080:80"
-volumes:
-- pgadmin-data:/var/lib/pgadmin
-  db-data:
-  pgadmin-data:
-links:
-- "db:pgsql-server"
+      - "8080:80"
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    links:
+      - "db:pgsql-server"
 
 volumes:
   todo-mysql-data:
+  db-data:
+  pgadmin-data:
 
 
