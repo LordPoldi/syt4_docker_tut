@@ -10,10 +10,10 @@ services:
     volumes:
       - ./:/app
     environment:
-      MYSQL_HOST: mysql
-      MYSQL_USER: root
-      MYSQL_PASSWORD: rootpw1234
-      MYSQL_DB: todos
+      PG_HOST: mysql
+      PG_USER: root
+      PG_PASSWORD: rootpw1234
+      PG_DB: todos
 
   mysql:
     image: mysql:5.7
